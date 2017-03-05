@@ -1,0 +1,31 @@
+*{
+    font-family: 'Lato', sans-serif;
+
+}
+/*@media only screen and(max-width: 500px);*/
+.title{
+    background-color: #33BEBE;
+    padding: 2%;
+}
+.description{
+    padding: 2%;
+ /*   max-width: 460px;*/
+}
+.app{
+    padding: 2%;
+    display: -webkit-flex;
+    background-color: #33BEBE;
+}
+.screenshot{
+    max-width: 500px;
+    margin-right: 50px;
+}
+* {
+   outline: 1px solid red !important;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
