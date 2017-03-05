@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+
+<title>sign up</title>
+<style>
+body {
+    background-image: url("image1.jpeg");
+    background-repeat: repeat-x;
+background-repeat: repeat-y;
+
+}
+
+.logo {
+    width: 400px;
+    height: 150px;
+margin: 0 auto;
+    padding: 20px;
+
+}
+.logo h1 {
+
+    text-align: center;
+    color: #ff7b81;
+    font-size: 80 px;
+    margin-top: 5 px;
+    margin-bottom: 10 px;
+    font-family: Montserrat;
+  }
+
+
+
+.login-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid #ff656c;
+    margin: 0 auto;
+}
+
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #ff656c;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: #ff7b81;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e15960;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: #ff7b81;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="logo">
+     <h1><strong>Sign Up Today:It's free!</strong></h1>
+</div>
+<div class="login-block">
+    <h1>Sign up</h1>
+    <form action="" method="post">
+    <input type="name" value="{{
+          request.form.name }}" placeholder="name" id="name" />
+    <input type="text" value="{{
+          request.form.username }}" placeholder="username" id="username" />
+    <input type="password" value="{{
+          request.form.password }}" placeholder="password" id="password" />
+        <input type="gender" value="{{
+          request.form.gender }}" placeholder="gender" id="gender" />
+          <input type="age" value="{{
+          request.form.age }}" placeholder="age" id="age" />
+
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+      {% for message in get_flashed_messages() %}
+        {{ message }}
+      {% endfor %}
+
+    <button>Submit</button>
+</div>
+</body>
+
+</html>
